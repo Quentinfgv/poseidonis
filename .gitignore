@@ -1,0 +1,18 @@
+# Fichiers de configuration sensibles
+config.php
+
+# Fichiers temporaires
+*.tmp
+*.log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Dossiers de cache
+cache/
+temp/
+
+# Fichiers de base de données
+*.sql
+*.db
