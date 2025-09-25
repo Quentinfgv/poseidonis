@@ -4,9 +4,7 @@ include_once("config.php");
 
 $sql = "SELECT * FROM carte_plat";
 
-
 try {
-
     //envoyer une requête a MySQL
     $carte_plat = $BDD->query($sql);
 } catch (PDOException $ex) {
@@ -17,7 +15,6 @@ try {
 
 $sql = "SELECT * FROM carte_boisson";
 try {
-
     //envoyer une requête a MySQL
     $carte_boisson = $BDD->query($sql);
 } catch (PDOException $ex) {
@@ -30,7 +27,6 @@ include_once("header.php");
 
 $sql = "SELECT * FROM carte_dessert";
 try {
-
     //envoyer une requête a MySQL
     $carte_dessert = $BDD->query($sql);
 } catch (PDOException $ex) {
@@ -38,9 +34,6 @@ try {
     print 'Erreur' . $ex->getMessage();
     exit;
 }
-
-include_once("header.php");
-
 
 // exploiter les données
 
@@ -56,8 +49,7 @@ include_once("header.php");
                             <div class="card w-100 h-100">
                             ' . $plat->image . '
                             <div class="card-body">
-                            ' . $plat->titre
-                    . $plat->prix . $plat->description . '
+                            ' . $plat->titre . $plat->prix . $plat->description . '
                             </div>
                             </div>
                             </div>';
@@ -77,8 +69,7 @@ include_once("header.php");
                             <div class="card w-100 h-100">
                             ' . $boisson->image . '
                             <div class="card-body">
-                            ' . $boisson->titre
-                    . $boisson->prix . '
+                            ' . $boisson->titre . $boisson->prix . '
                             </div>
                             </div>
                             </div>';
@@ -98,8 +89,7 @@ include_once("header.php");
                             <div class="card w-100 h-100">
                             ' . $dessert->image . '
                             <div class="card-body">
-                            ' . $dessert->titre
-                    . $dessert->prix . $dessert->description . '
+                            ' . $dessert->titre . $dessert->prix . $dessert->description . '
                             </div>
                             </div>
                             </div>';

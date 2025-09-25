@@ -25,9 +25,7 @@ include_once("header.php");
     while ($vente = $vente_page->fetch()) {
         print '<section class="my-5 ms-4">
             <div class="container row mt-5 ms-5 w-80">
-                <div class="col-4">
-                    <img src="' . $vente->image . '" class="img-fluid rounded" alt="Image de vente">
-                </div>
+                ' . $vente->image . '
                 <div class="col-8 align-self-center border border-black ms-5 my-5 mt-5 p-3">
                    ' . $vente->description . '
                 </div>
